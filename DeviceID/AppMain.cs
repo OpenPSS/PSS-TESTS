@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.IO;
 using Sce.PlayStation.Core.Services;
 namespace DeviceID
 {
@@ -7,7 +7,8 @@ namespace DeviceID
 	{		
 		public static void Main (string[] args)
 		{
-			Console.WriteLine(BitConverter.ToString(AccountInformation.UniqueID).Replace("-", ""));
+			string uid = BitConverter.ToString(AccountInformation.UniqueID).Replace("-", "");
+			File.WriteAllText("/Documents/UniqueID.txt", uid);
 			
 			// Windows PSM : gives you your username padded out with 0s,
 		}

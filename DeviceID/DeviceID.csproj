@@ -31,16 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
     <Reference Include="Sce.PlayStation.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppMain.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ShaderProgram Include="shaders\Simple.fcg" />
-    <ShaderProgram Include="shaders\Simple.vcg" />
   </ItemGroup>
   <ItemGroup>
     <PsmMetadata Include="app.xml" />
