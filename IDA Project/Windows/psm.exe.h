@@ -1,8 +1,51 @@
 /* 276 */
-struct sce::pss::core::graphics::GraphicsContext;
+struct sce::pss::core::graphics::GraphicsContext{
+	int unk0;
+	int unk1;
+	int unk2;
+	int unk3;
+	int unk4;
+	int unk5;
+	int activeShaderProgram;
+	int activeFrameBuffer;
+	int unk6;
+	int unk7;
+	int unk8;
+	int unk9;
+	int unk10;
+	int unk11;
+	int unk12;
+	int unk13;
+	int unk14;
+	int unk15;
+	int unk16;
+	int unk17;
+	int mscreen_something;
+	int unk19;
+	int unk20;
+	int unk21;
+	int unk22;
+	int unk23;
+	int unk24;
+	char hasShaderOrFramebuffer;
+	char hasFrameBuffer;
+	int unk27;
+	int unk28;
+	int unk29;
+};
 
 /* 277 */
-struct sce::pss::core::graphics::GraphicsObject;
+struct sce::pss::core::graphics::GraphicsObject{
+    void* ActiveStateChange;
+	int Active;
+	int unk1;
+	int unk2;
+	int unk3;
+	int unk4;
+	int glRef;
+
+};
+
 
 /* 278 */
 struct sce::pss::core::ExceptionInfo;
@@ -17,7 +60,10 @@ struct sce::pss::core::graphics::OpenGL;
 struct sce::pss::core::graphics::PixelBuffer;
 
 /* 282 */
-struct sce::pss::core::graphics::ShaderProgram;
+struct sce::pss::core::graphics::ShaderProgram{
+	sce::pss::core::graphics::GraphicsObject base;
+};
+	
 
 /* 283 */
 struct sce::pss::core::impose::InGameMenu;
@@ -176,7 +222,14 @@ struct sce::pss::core::datetime::DateTime;
 struct sce::pss::core::graphics::Texture;
 
 /* 335 */
-struct sce::pss::core::graphics::VertexBuffer;
+struct sce::pss::core::graphics::VertexBuffer{
+	sce::pss::core::graphics::GraphicsObject base;
+	char unk2[0x4C];
+	int glReference;
+	int unk3;
+	int unk4;
+	int unk5_ischecked;
+};
 
 /* 336 */
 struct sce::pss::core::imaging::impl::ImageBlur;
@@ -248,7 +301,29 @@ struct sce::pss::core::environment::SystemParameters;
 struct sce::pss::core::environment::SystemEvents;
 
 /* 359 */
-struct sce::pss::core::graphics::FrameBuffer;
+struct sce::pss::core::graphics::FrameBuffer{
+	sce::pss::core::graphics::GraphicsObject base;
+	int unk6;
+	int unk7;
+	int unk8;
+	int unk9;
+	int unk10;
+	int unk11;
+	char unk12;
+	int unk13;
+	int unk14;
+	int unk15;
+	int unk16;
+	int unk17;
+	int unk18;
+	int unk19;
+	int unk20;
+	int unk21;
+	int unk22;
+	int unk23;
+	int unk24;
+	
+};
 
 /* 360 */
 struct sce::pss::core::services::NetworkRequest;
@@ -396,10 +471,6 @@ struct ImageRect
   int Y;
   int Width;
   int Height;
-  int Left;
-  int Top;
-  int Right;
-  int Bottom;
 };
 
 /* 401 */
@@ -416,6 +487,23 @@ struct Vector2
 {
   float X;
   float Y;
+};
+
+struct PsmHandles{
+	unsigned int Shader;
+	unsigned int FrameBuffer;
+	unsigned int unk0;
+	unsigned int unk1;
+	unsigned int VertexBuffers[4];
+	unsigned int Textures[4];
+};
+
+enum ClearMask :  unsigned __int32 {
+	ClearMask_None = 0,
+	ClearMask_Color = 1,
+	ClearMask_Depth = 2,
+	ClearMask_Stencil = 4,
+	ClearMask_All = 7
 };
 
 /* 403 */
