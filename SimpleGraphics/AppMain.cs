@@ -38,7 +38,7 @@ namespace SimpleGraphics
 		public static void Render ()
 		{
 			// Clear the screen
-			graphics.SetClearColor (1.0f, 0.0f, 0.0f, 0.0f);
+			graphics.SetClearColor (1.0f, 0.0f, 0.0f, 1.0f);
 			graphics.Clear ();
 
 			// Present the screen
