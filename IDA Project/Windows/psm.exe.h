@@ -427,6 +427,13 @@ struct sce::pss::core::file;
 /* 393 */
 struct sce::pss::core::input;
 
+struct InternalData
+{
+	bool QuitRequired;
+	bool Restored;
+	bool Minimized;
+};
+
 /* 394 */
 struct DepthFunc
 {
