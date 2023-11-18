@@ -32,26 +32,20 @@ def rename_tbl(tbl_start, tbl_end):
     offset = tbl_start
 
     while offset < tbl_end:
-        name_ptr = read_cstring(read_uint32(offset))
-        offset += 4
-        function_ptr = read_uint32(offset)
-        offset += 4
-        
-        cppName = toCppName(name_ptr)
-        rename_function(function_ptr, cppName)
-
-
+        dis = idc.GetDisasm(offset)
+        if dis.startswith("mov"):
+            pts = dis[len("mov     "):].split(',')
+            #print(pts)
+            addr = idc.get_name_ea_simple(pts[0])
+            newname = "_"+pts[1][len(" offset "):]
+            print(hex(addr))
+            print(newname)
+            rename_function(addr, newname)
+        offset += 0xA
 
 def main():
     tbls = [
-            (0x00B9C180, 0x00B9C1F0),
-            (0x00B9C1F8, 0x00B9C290),
-            (0x00B9C298, 0x00B9C2B8),
-            (0x00B9C2C0, 0x00B9C3A0),
-            (0x00B9C3A8, 0x00B9C3C8),
-            (0x00B9C3D0, 0x00B9C510),
-            (0x00B9C518, 0x00B9C758),
-            (0x00B9C760, 0x00B9C890)
+            (0x00EAC450, 0x00EAC6DC)
            ]
     print("Running")
     
