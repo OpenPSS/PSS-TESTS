@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TextureTest\AppMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppMain.cs">
     <Files>
-      <File FileName="TextureTest\AppMain.cs" Line="22" Column="4" />
-      <File FileName="TextureTest\app.xml" Line="4" Column="30" />
+      <File FileName="AppMain.cs" Line="47" Column="39" />
+      <File FileName="app.xml" Line="3" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
