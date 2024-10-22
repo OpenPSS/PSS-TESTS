@@ -1,4 +1,4 @@
-IDA has found an unpacked version of database: C:\Users\Li\Desktop\git\PSS-TESTS\IDA Project\Windows\psm.exe.idb
+IDA has found an unpacked version of database: C:\Users\Li\Desktop\git\PSS-TESTS\IDA Project\Android\libdefault.so.idb
 on the disk.
 
 Should we proceed with the unpacked files?
@@ -6,16 +6,15 @@ Should we proceed with the unpacked files?
 
   bytes   pages size description
 --------- ----- ---- --------------------------------------------
- 13402112  1636 8192 allocating memory for b-tree...
- 13352960  1630 8192 allocating memory for virtual array...
+ 25296896  3088 8192 allocating memory for b-tree...
+ 47980544  5857 8192 allocating memory for virtual array...
    262144    32 8192 allocating memory for name pointers...
 -----------------------------------------------------------------
- 27017216            total memory allocated
+ 73539584            total memory allocated
 
 Loading type libraries...
 Can't use BIOS comments base. -> OK
-**DATABASE IS CORRUPTED: migrate_asmstructs::get_struc_by_idx(1154/TID=FDFEFF49) failed
 Autoanalysis subsystem has been initialized.
-Database for file 'psm.exe' has been loaded.
+Database for file 'libdefault_real.so' has been loaded.
 Flushing buffers, please wait...ok
-Unloading IDP module pc...
+Unloading IDP module arm...
